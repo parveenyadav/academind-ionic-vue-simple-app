@@ -1,0 +1,7 @@
+{
+  "name": "academind-ionic-vue-simple-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
