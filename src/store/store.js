@@ -39,6 +39,22 @@ const store=createStore({
                return state.memories.find((memory)=>memory.id===memoryId);
             }
         }
-    }
+    },
+    mutations:{
+        addMemory(state, memoryData){
+            const newMemory ={
+                id: new Date().toString(),
+                title: memoryData.title,
+                image: memoryData.image,
+                description: memoryData.description
+            }
+            state.memories.unshift(newMemory);
+        },
+    },
+    actions:{
+        addMemory(context, memoryData){
+            context.commit('addMemory', memoryData)
+        }
+    },
 });
 export default store;
